@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: artifactgen-config
+  namespace: go-echo
+  labels:
+    app.kubernetes.io/name: artifactgen
+    kubernetes.azure.com/generator: devhub
+data:
