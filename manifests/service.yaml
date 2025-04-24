@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: artifactgen
+  namespace: go-echo
+  labels:
+    app.kubernetes.io/name: artifactgen
+    kubernetes.azure.com/generator: devhub
+spec:
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/name: artifactgen
+  ports:
+    - protocol: TCP
+      port: 1323
+      targetPort: 1323
